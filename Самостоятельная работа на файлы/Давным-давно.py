@@ -31,4 +31,6 @@ for name in names_file:
             stroka = [int(i) for i in stroka.split()]
             ans.append(multi_list(stroka, avg_all_numbers))
 
-print(ans)
+with open('ages_ago.txt', mode='w', encoding='utf-8') as output_file:
+    for i in ans:
+        output_file.write(f"{i}\n")
